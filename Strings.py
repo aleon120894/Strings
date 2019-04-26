@@ -86,10 +86,19 @@ def even_replace(str):
             str.replace('a')
 
 # Дана строка. Если она начинается на 'abc', то заменить их на 'www', иначе добавить в конец строки 'zzz'.
+s = input("Enter some string: ")
 
 def replace(str):
 
-    for i in str:
+    if str[0:2] == 'abc' and len(str) >= 3:
+        str.replace('www')
+    else:
+        return str
+    return str
+
+new_string = replace(s)
+print(new_string)
+
 
 
 # Дано две строки. Сравнить совпадают ли в них первые и последние 4 символа.
